@@ -88,8 +88,8 @@ const performReplacements = str => {
   str = str.replace(/{{ camelCase name }}/g, camelCase(name));
   str = str.replace(/{{ properCase name }}/g, uppercaseFirst(camelCase(name)));
 
-  if (pjson["ngrx-cli"]) {
-    const ngrxCliObj = pjson["ngrx-cli"];
+  if (pjson["ngrx-generate"]) {
+    const ngrxCliObj = pjson["ngrx-generate"];
 
     if (ngrxCliObj.rootStore) {
       if (ngrxCliObj.groupByName) {
@@ -116,8 +116,8 @@ const writeFileFromStr = (str, type) => {
 };
 
 const determineWriteLocation = type => {
-  if (pjson["ngrx-cli"]) {
-    const ngrxCliObj = pjson["ngrx-cli"];
+  if (pjson["ngrx-generate"]) {
+    const ngrxCliObj = pjson["ngrx-generate"];
 
     if (ngrxCliObj.rootStore) {
       if (ngrxCliObj.groupByName) {

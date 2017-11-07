@@ -1,11 +1,11 @@
-# ngrx-cli
+# ngrx-generate
 
 ### A command line interface to generate your base ngrx files
 
 ### Usage
 From the root of your project, run 
 ```bash
-ngrx-cli [type] [name]
+ngrx-generate [type] [name]
 ```
 [type] is 1 or all of 'actions', 'reducers', 'effects', 'service' or 'all'. Using 'all' is shorthand for the rest, or you can pick and choose the files you wish to generate.
 
@@ -14,7 +14,7 @@ ngrx-cli [type] [name]
 Example commands:
 
 ```bash
-ngrx-cli all session
+ngrx-generate all session
 ```
 
 You can edit configuration options in your project's package.json
@@ -22,7 +22,7 @@ You can edit configuration options in your project's package.json
 ```bash
 {
 	...package,
-    "ngrx-cli": {
+    "ngrx-generate": {
     	"groupByName": true,
         "rootStore": "src/app/store"
     }
